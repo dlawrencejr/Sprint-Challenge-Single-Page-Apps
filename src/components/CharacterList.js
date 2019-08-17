@@ -27,11 +27,12 @@ export default function CharacterList(props) {
       {characters.map(character => (
         
         <CharacterCard 
+        key={character.id}
         img={character.image}
         name={character.name}
         status={character.status}
-        location={character.location}
-        origin={character.origin}
+        location={character.location.name}
+        origin={character.origin.name}
         />
 
       ))}
