@@ -29,10 +29,13 @@ export default function CharacterList(props) {
         <CharacterCard 
         key={character.id}
         img={character.image}
+        species={character.species}
         name={character.name}
         status={character.status}
+        episode={character.episode}
         location={character.location.name}
         origin={character.origin.name}
+       
         />
 
       ))}

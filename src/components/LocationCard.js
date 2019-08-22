@@ -10,13 +10,29 @@ export default function LocationCard(props) {
     //   <h4>Type:{props.type}</h4>
     //   <p>Dimension: {props.dimension}</p>
     // </span>
-       <Card
-       header={props.name}
-       meta={props.type}
-       description={props.dimension}
-       extra={<Icon name='user'/>} 
+
+      //  <Card
+      //  header={props.name}
+      //  meta={props.type}
+      //  description={props.dimension}
+      //  extra={<Icon name='user'/>} 
+      //  />
       
-       />
+       <Card>
+       <Card.Content>
+         <Card.Header>{props.name}</Card.Header>
+         <Card.Meta>
+           <span>
+             <br></br>
+             {props.type} {props.dimension}
+           </span>
+         </Card.Meta>
+       </Card.Content>
+       <Card.Content extra className='residents'>
+           <Icon name="user"/>
+           Residents: {props.residents.length}
+         </Card.Content>
+     </Card>
 
   );
 }
